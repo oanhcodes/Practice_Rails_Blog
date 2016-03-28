@@ -2,19 +2,20 @@
 <html>
 <head>
   <title>Blogger</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<nav>
+  <% if current_user %>
+    Signed in as <%= current_user.first_name %> | <%= link_to "Logout", '/logout' %>
+  <% else %>
+    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+  <% end %>
+</nav>
+<a href = "/"><h1>My Blog</h1></a>
 <p class "flash"><%= flash.notice %></p>
-
-<% if current_user %>
-  Signed in as <%= current_user.first_name %> | <%= link_to "Logout", '/logout' %>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
-
 <%= yield %>
 
 </body>

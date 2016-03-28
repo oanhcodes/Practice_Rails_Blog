@@ -1,0 +1,50 @@
+body, html {
+  margin: 0;
+  padding: 0;
+ }
+
+h1 {
+  position: fixed;
+  text-align: center;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:5%;
+  margin-bottom: 20px;
+  background-color: #7986CB;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav a:hover {
+color: gray;
+}
+
+.right {
+  float: right;
+}
+
+.blog-container {
+  height: 300px;
+  width: 60%; 
+  margin: 50px auto;
+}
+
+.blog {
+  border-bottom: 1px solid black;
+}
