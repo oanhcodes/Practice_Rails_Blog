@@ -7,5 +7,11 @@
   <% end %>
   </div>
 
+  <div>
   <%= link_to "Create a New Article", new_article_path, class: 'new_article' %>
+  </div>
+
+  <div class="page-numbers">
+    <%= will_paginate @articles, previous_label: "Older", next_label: "Newer", inner_window: 1, outer_window: 0 %>
+  </div>
 </div>
